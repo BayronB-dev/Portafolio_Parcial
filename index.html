@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bayron Barrios — Desarrollador web</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+
+  <body>
+    <!-- header: cabecera del sitio. Va aquí y no un div porque introduce
+         el sitio completo y contiene la navegación principal. -->
+    <header>
+      <nav class="barra-navegacion">
+        <span class="marca">Bayron Barrios</span>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main: el contenido único de esta página. Solo puede haber uno. -->
+    <main>
+      <section id="inicio">
+        <h1>Bayron Steven Barrios Donoso</h1>
+        <p class="presentacion">
+          Desarrollador web. Construyo sitios rápidos y hechos a la medida de
+          cada negocio.
+        </p>
+        <p>
+          Escríbeme a
+          <a href="mailto:hello@folkdone.com">hello@folkdone.com</a>
+        </p>
+      </section>
+
+      <section id="proyectos">
+        <h2>Proyectos</h2>
+
+        <!-- Los botones llevan data-categoria: JavaScript lee ese valor
+             para saber qué filtrar, sin tener que mirar el texto visible. -->
+        <div id="filtros">
+          <button type="button" data-categoria="todos">Todos</button>
+          <button type="button" data-categoria="negocio-local">
+            Negocio local
+          </button>
+          <button type="button" data-categoria="tienda-online">
+            Tienda online
+          </button>
+          <button type="button" data-categoria="marca-propia">
+            Marca propia
+          </button>
+        </div>
+
+        <!-- Este contenedor sale VACÍO a propósito: las tarjetas las crea
+             JavaScript recorriendo el arreglo de proyectos. -->
+        <div id="lista-proyectos"></div>
+      </section>
+
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Cuéntame qué necesitas y te respondo con una propuesta.</p>
+
+        <form id="formulario">
+          <div class="campo">
+            <label for="campo-nombre">Nombre</label>
+            <input type="text" id="campo-nombre" name="nombre" required />
+          </div>
+
+          <div class="campo">
+            <label for="campo-correo">Correo electrónico</label>
+            <input type="email" id="campo-correo" name="correo" required />
+          </div>
+
+          <div class="campo">
+            <label for="campo-tipo">Tipo de proyecto</label>
+            <select id="campo-tipo" name="tipo" required>
+              <option value="">Selecciona una opción</option>
+              <option value="Landing page">Landing page</option>
+              <option value="Tienda online">Tienda online</option>
+              <option value="Sitio de negocio">Sitio de negocio</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="campo-fecha">Fecha deseada de entrega</label>
+            <input type="date" id="campo-fecha" name="fecha" />
+          </div>
+
+          <div class="campo">
+            <label for="campo-presupuesto">Presupuesto aproximado (COP)</label>
+            <input
+              type="number"
+              id="campo-presupuesto"
+              name="presupuesto"
+              min="0"
+              step="50000"
+            />
+          </div>
+
+          <div class="campo campo-linea">
+            <input type="checkbox" id="campo-acepto" name="acepto" required />
+            <label for="campo-acepto">Acepto ser contactado por correo</label>
+          </div>
+
+          <button type="submit" class="boton-enviar">Enviar solicitud</button>
+        </form>
+
+        <!-- Aquí JavaScript escribe la retroalimentación del formulario. -->
+        <p id="mensaje"></p>
+
+        <table class="tabla-solicitudes">
+          <caption>
+            Solicitudes registradas en esta sesión
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">Acción</th>
+            </tr>
+          </thead>
+          <!-- Vacío igual que la lista de proyectos: las filas nacen desde JS. -->
+          <tbody id="cuerpo-tabla"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Hecho por Bayron Barrios &middot; <span id="anio"></span>
+      </p>
+    </footer>
+
+    <!-- El script va al final del body para que todo el HTML ya exista
+         cuando se ejecute. Por eso no hace falta DOMContentLoaded. -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
