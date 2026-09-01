@@ -79,6 +79,22 @@ section {
   border-bottom: 1px solid var(--color-borde);
 }
 
+/* Contenedor Flexbox 3: la presentacion, con el avatar al lado del texto. */
+#inicio {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--espacio) * 1.5);
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 2px solid var(--color-borde);
+  object-fit: cover;
+}
+
 h1 {
   font-size: 32px;
   margin-bottom: var(--espacio);
@@ -140,7 +156,10 @@ h2 {
 }
 
 .tarjeta {
-  flex: 1 1 280px;
+  /* Base de 380px: en el ancho maximo (960px) entran exactamente dos por
+     fila, asi los cuatro proyectos quedan en una rejilla 2x2 y ninguna
+     tarjeta se queda sola estirada a lo ancho. */
+  flex: 1 1 380px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -318,6 +337,18 @@ footer {
   .barra-navegacion {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  /* El avatar pasa arriba del texto y se achica. */
+  #inicio {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--espacio);
+  }
+
+  .avatar {
+    width: 110px;
+    height: 110px;
   }
 
   .tarjeta {

@@ -37,13 +37,13 @@ favicon.svg         icono del sitio
 | Requisito | Dónde |
 |---|---|
 | DOCTYPE, `lang="es"`, charset UTF-8, meta viewport | `index.html` 1-6 |
-| Etiquetas semánticas `header`, `nav`, `main`, `section`, `footer` | `index.html` 14, 15, 26, 27, 134 |
-| Un único `<h1>` y jerarquía sin saltos | `h1` en 28; `h2` en 40 y 63; `h3` los crea `crearTarjeta` |
-| 4 imágenes con `alt` descriptivo | las crea `crearTarjeta`, texto en el arreglo `proyectos` |
-| Formulario con `label` asociado por `for`/`id` | `index.html` 66-110 |
+| Etiquetas semánticas `header`, `nav`, `main`, `section`, `footer` | `index.html` 14, 15, 26, 27, 143 |
+| Un único `<h1>` y jerarquía sin saltos | `h1` en 36; `h2` en 49 y 72; `h3` los crea `crearTarjeta` |
+| 5 imágenes con `alt` descriptivo | avatar en `index.html` 28; las 4 de proyecto las crea `crearTarjeta` |
+| Formulario con `label` asociado por `for`/`id` | `index.html` 75-119 |
 | 6 tipos de campo distintos | text, email, select, date, number, checkbox |
 | `required` donde aplica | nombre, correo, tipo y checkbox |
-| Tabla con `caption`, `thead`, `tbody` y `scope` | `index.html` 115-130 |
+| Tabla con `caption`, `thead`, `tbody` y `scope` | `index.html` 124-139 |
 
 ### CSS
 
@@ -53,9 +53,10 @@ favicon.svg         icono del sitio
 | 6 variables en `:root` usadas con `var()` | `estilos.css` 5 |
 | Modelo de caja `box-sizing: border-box` | `estilos.css` 17 |
 | Flexbox contenedor 1: barra de navegación | `estilos.css` 37 |
-| Flexbox contenedor 2: rejilla de tarjetas | `estilos.css` 135 |
-| Efecto `:hover` | `estilos.css` 64 (nav) y 155 (tarjeta) |
-| `@media` responsiva | `estilos.css` 317 |
+| Flexbox contenedor 2: rejilla de tarjetas | `estilos.css` 151 |
+| Flexbox contenedor 3: presentación con avatar | `estilos.css` 83 |
+| Efecto `:hover` | `estilos.css` 64 (nav) y 171 (tarjeta) |
+| `@media` responsiva | `estilos.css` 333 |
 
 ### JavaScript
 
