@@ -145,8 +145,7 @@ h2 {
 
 /* ------------------------------------------------------------------
    Contenedor Flexbox 2: la rejilla de tarjetas.
-   flex: 1 1 280px = puede crecer, puede encoger, parte de 280px.
-   Con flex-wrap las tarjetas saltan de linea solas.
+   Con flex-wrap las tarjetas saltan de linea solas cuando no caben.
    ------------------------------------------------------------------ */
 #lista-proyectos {
   display: flex;
@@ -156,8 +155,9 @@ h2 {
 }
 
 .tarjeta {
-  /* Base de 380px: en el ancho maximo (960px) entran exactamente dos por
-     fila, asi los cuatro proyectos quedan en una rejilla 2x2 y ninguna
+  /* flex: crecer / encoger / base de 380px.
+     Con 380px de base, en el ancho maximo (960px) entran exactamente dos
+     por fila: los cuatro proyectos quedan en rejilla 2x2 y ninguna
      tarjeta se queda sola estirada a lo ancho. */
   flex: 1 1 380px;
   display: flex;
