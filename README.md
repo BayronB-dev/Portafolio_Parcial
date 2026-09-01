@@ -53,10 +53,10 @@ favicon.svg         icono del sitio
 | 6 variables en `:root` usadas con `var()` | `estilos.css` 5 |
 | Modelo de caja `box-sizing: border-box` | `estilos.css` 17 |
 | Flexbox contenedor 1: barra de navegación | `estilos.css` 37 |
-| Flexbox contenedor 2: rejilla de tarjetas | `estilos.css` 151 |
+| Flexbox contenedor 2: rejilla de tarjetas | `estilos.css` 150 |
 | Flexbox contenedor 3: presentación con avatar | `estilos.css` 83 |
-| Efecto `:hover` | `estilos.css` 64 (nav) y 171 (tarjeta) |
-| `@media` responsiva | `estilos.css` 333 |
+| Efecto `:hover` | `estilos.css` 64 (nav) y 174 (tarjeta) |
+| `@media` responsiva | `estilos.css` 336 |
 
 ### JavaScript
 
